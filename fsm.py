@@ -1,4 +1,4 @@
-from transitions.extensions import Machine
+from transitions import Machine
  
 from utils import send_text_message
 

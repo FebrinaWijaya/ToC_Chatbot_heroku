@@ -1,9 +1,9 @@
-from transitions.extensions import GraphMachine
+from transitions.extensions import Machine
  
 from utils import send_text_message
 
 
-class TocMachine(GraphMachine):
+class TocMachine(Machine):
     def __init__(self, **machine_configs):
         self.machine = GraphMachine(
             model=self,

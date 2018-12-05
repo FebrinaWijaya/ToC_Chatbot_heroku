@@ -5,7 +5,7 @@ from utils import send_text_message
 
 class TocMachine(Machine):
     def __init__(self, **machine_configs):
-        self.machine = GraphMachine(
+        self.machine = Machine(
             model=self,
             **machine_configs
         )

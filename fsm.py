@@ -1,13 +1,13 @@
-from transitions.extensions import GraphMachine
+from transitions.extensions import Machine
 
 from utils import send_text_message
 from utils import send_image_url
 from utils import send_button_message
 from data import data
 
-class TocMachine(GraphMachine):
+class TocMachine(Machine):
     def __init__(self, **machine_configs):
-        self.machine = GraphMachine(
+        self.machine = Machine(
             model=self,
             **machine_configs
         )

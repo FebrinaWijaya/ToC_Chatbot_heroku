@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 data = {
 	'text' : '''Hi! We provide some recommendations for your vacation in Indonesia. Let me know what is the purpose of your trip.
 You may just type the number.

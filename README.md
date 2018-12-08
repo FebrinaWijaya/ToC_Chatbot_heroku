@@ -89,41 +89,12 @@ Make some changes to the code you just cloned and deploy them to Heroku using Gi
 	heroku config:set VERIFY_TOKEN=FWy9z9bjutzBb1oLfjt2D
 	heroku config:set ACCESS_TOKEN=EAAaOfEoALZC0BAHgVj0iaXsr9jaRC1JagSWoSYyZByk3vK2ZCA6E0G6LBzCMcwnzgUnZAyyndlDvmYYqB7CvsxHL53DO1wSA4S7PH4zO2DEsL5fXZCQCHTCzZCWhYzW17rUXr2GN0Bwmiy6pD0OI5ZAOw4AFyFHbSLy1GPqYvZBpzS3PU7lSKpxF
 	```
-- Setup webhook just like step 3, 4, 5 using localhost
+- Webhook -> edit subscription
 	- Callback URL:  https://itsvacationtime.herokuapp.com/webhook
 	- Verify token: FWy9z9bjutzBb1oLfjt2D
 
-## Localhost with ngrok
-To add environment variable:
-```sh
-VERIFY_TOKEN = "FWy9z9bjutzBb1oLfjt2D"
-ACCESS_TOKEN = "EAAaOfEoALZC0BAHgVj0iaXsr9jaRC1JagSWoSYyZByk3vK2ZCA6E0G6LBzCMcwnzgUnZAyyndlDvmYYqB7CvsxHL53DO1wSA4S7PH4zO2DEsL5fXZCQCHTCzZCWhYzW17rUXr2GN0Bwmiy6pD0OI5ZAOw4AFyFHbSLy1GPqYvZBpzS3PU7lSKpxF"
-```
-
-1. ```sh
-    ./ngrok http 5000
-    ```
-    - will generate https link
-        - e.g  https://7398aaae.ngrok.io
-    ![](https://i.imgur.com/cvqkhpF.png)
-2. run the script:
-    ```sh
-    python3 app.py
-    ```
-    ![](https://i.imgur.com/U3vcOTa.png)
-3. copy the ngrok link to webhook, fill in the right verification token
-    verify token: FWy9z9bjutzBb1oLfjt2D
-    ![](https://i.imgur.com/p0j5CpO.png)
-
-    - First time:
-        - setup from messenger->settings->webhooks
-        - if we want to change the URL:
-            - Webhooks->edit subscription
-            - ![](https://i.imgur.com/SxHtigq.png)
-
-    - Verification token should be the same as the VERIFY_TOKEN in **app.py**
-4. subscribe fb page to webhook(messenger->settings->webhooks)
+- subscribe fb page to webhook(messenger->settings->webhooks)
     ![](https://i.imgur.com/KZWayaD.png)
 
-5. Generate token for the page and copy to ACCESS_TOKEN in utils.py
+- Generate token for the page and copy to ACCESS_TOKEN in utils.py
     ![](https://i.imgur.com/c5nYRKf.png)

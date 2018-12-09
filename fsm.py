@@ -1,5 +1,5 @@
-#from transitions import Machine
-from transitions.extensions import GraphMachine as Machine
+from transitions import Machine
+#from transitions.extensions import GraphMachine as Machine
 from utils import send_text_message
 from utils import send_image_url
 from utils import send_button_message
